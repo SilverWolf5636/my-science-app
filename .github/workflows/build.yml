@@ -16,14 +16,13 @@ jobs:
     - name: Set up Java Environment
       uses: actions/setup-java@v4
       with:
-        distribution: 'temurin'
+        distribution: 'zulu'
         java-version: '17'
 
-    - name: Install System Gradle
-      run: sudo apt-get update && sudo apt-get install -y gradle
-
-    - name: Grant Execute Permission for Gradle
-      run: chmod +x gradlew || true
+    - name: Setup Gradle Build Tool
+      uses: gradle/actions/setup-gradle@v4
+      with:
+        gradle-version: '8.5'
 
     - name: Compile Debug APK File
       run: gradle assembleDebug --no-daemon
