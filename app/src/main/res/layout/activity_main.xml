@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://android.com"
+    xmlns:tools="http://android.com"
+    android:layout_width="match_match"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/welcome_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome to MSC Science Store!"
+        android:textSize="20sp"
+        android:layout_centerInParent="true" />
+
+</RelativeLayout>
